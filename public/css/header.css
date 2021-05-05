@@ -1,0 +1,13 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-content-userData nav li {
+    display: inline-block;
+}
