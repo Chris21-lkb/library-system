@@ -19,6 +19,24 @@ class bookController extends Controller
         
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+    
+        //$result = Book::where("BookName","like","%".$search."%")->get();
+
+        //return View('pages.search',compact('result'));
+        //->with('$result');
+
+        $result = Book::query()
+        ->where('BookName', 'LIKE', "%{$search}%")
+        ->orWhere('author', 'LIKE', "%{$search}%")
+        ->get();
+
+        // Return the search view with the resluts compacted
+        return view('pages.search', compact('result'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

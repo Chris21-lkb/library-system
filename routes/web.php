@@ -23,3 +23,13 @@ Route::post('insert',[bookController::class,'store']);
 Route::get('/home', function () {
     return view('pages.home');
 })-> middleware('auth');
+
+Route::get('/home', function () {
+    return view('pages.home');
+});
+
+Route::get('/search', function () {
+    return view('pages.search');
+});
+
+Route::get('searchbook/',[bookController::class,'search'])->name('search');;
