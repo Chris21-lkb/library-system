@@ -10,6 +10,7 @@
 .section-data {
     border: 1px solid grey;
     margin: 5px;
+    padding: 5px;
 }
 
 .section-data:hover {
@@ -45,16 +46,17 @@ table {
 }
 
 td li {
-    border: 1px solid black;
+    border: 1px solid greenyellow;
     width: 150px;
     list-style: none;
     text-align: center;
     padding: 10px;
+    background-color: springgreen;
+    box-shadow: 2px 1px 1px grey;
 }
 
-td a {
+td li a {
     text-decoration: none;
-    margin-top: 20px;
 }
 
 #data {

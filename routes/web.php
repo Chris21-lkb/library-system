@@ -15,13 +15,17 @@ use App\Http\Controllers\bookController;
 */
 
 Route::get('/', function () {
-    return view('insert');
+    return view('pages.login');
 });
 
 Route::post('insert',[bookController::class,'store']);
 
 Route::get('/home', function () {
     return view('pages.home');
+})-> middleware('auth');
+
+Route::get('/checkout/{id}', function () {
+   return view('pages.checkout');
 })-> middleware('auth');
 
 Route::get('/home', function () {
@@ -32,4 +36,5 @@ Route::get('/search', function () {
     return view('pages.search');
 });
 
-Route::get('searchbook/',[bookController::class,'search'])->name('search');;
+Route::get('searchbook/',[bookController::class,'search'])->name('search');
+Route::get('showbook/{id}/',[bookController::class,'showdata']);

@@ -93,7 +93,17 @@ class bookController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('pages.checkout', [
+            'data' => Book::findOrFail($id)
+        ]);
+    }
+
+    public function showdata(Request $request){
+
+        
+         $request = Book::find($request->id);
+        //return view('pages.checkout')->with('data');
+        return view('pages.checkout', compact('request'));
     }
 
     /**

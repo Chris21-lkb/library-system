@@ -1,0 +1,16 @@
+.checkout-content {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid grey;
+    padding: 5px;
+    width: 900px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-family: Garamond;
+    text-align: justify;
+}
+
+.checkout-content img {
+    width: 400px;
+    height: 400px;
+}
