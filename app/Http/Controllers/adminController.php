@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Book;
+use App\Models\User;
 
-class CheckoutController extends Controller
+class adminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +15,17 @@ class CheckoutController extends Controller
      */
     public function index()
     {
-        //
+        //$user = User::all();
+        //return view('pages.admin',['data'=>$user]);
+
+        return View('pages.admin')
+        ->with('data', User::all())
+        ->with('data5', Book::all());
     }
 
+    public function nombre(){
+       
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -34,7 +44,7 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
-        return 'ok';
+        //
     }
 
     /**
@@ -79,6 +89,8 @@ class CheckoutController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = User::find($id);
+        $data -> delete();
+        return redirect() -> back();
     }
 }

@@ -7,4 +7,10 @@
     <input type="number" step="0.01" name="price" placeholder="book price" required>
     <input type="file" name="book_path" required>
     <button type="submit">Add book</button>
-</form> 
+</form>
+
+<form method="POST" action="insertCheckout">
+    @csrf
+    
+    <button type="submit">CHECKOUT NOW</button>
+</form>

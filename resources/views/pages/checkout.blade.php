@@ -11,8 +11,18 @@
         <h2>Author: {{$request['author']}}</h2>
         <h2>Price: {{$request['price']}} RMB</h2>
         <h2>Year: {{$request['publishDate']}}</h2>
-    </div>
 
+        <div class="formulaire">
+            <form method="POST" action="add">
+                @csrf
+                <input type="hidden" name="useremail" value="{{ Auth::user()->email }}">
+                <input type="hidden" name="productID" value="{{$request['id']}}">
+                <input type="hidden" name="productID" value="{{$request['BookName']}}">
+                <button type="submit">CHECKOUT NOW</button>
+            </form>
+        </div>
+        
+    </div>
 
 </div>
 @stop

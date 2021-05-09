@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\bookController;
+use App\Http\Controllers\adminController;
+use App\Http\Controllers\CheckoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +16,13 @@ use App\Http\Controllers\bookController;
 |
 */
 
+Route::get('/insert', function () {
+    return view('insert');
+});
+
 Route::get('/', function () {
     return view('pages.login');
 });
-
-Route::post('insert',[bookController::class,'store']);
 
 Route::get('/home', function () {
     return view('pages.home');
@@ -37,4 +41,14 @@ Route::get('/search', function () {
 });
 
 Route::get('searchbook/',[bookController::class,'search'])->name('search');
+Route::get('admin/',[adminController::class,'index']);
 Route::get('showbook/{id}/',[bookController::class,'showdata']);
+
+Route::post('add',[checkoutController::class,'store']);
+Route::post('insert',[bookController::class,'store']);
+
+Route::get('delete/{id}',[bookController::class,'destroy']);
+Route::get('deleteuser/{id}',[adminController::class,'destroy']);
+
+Route::get('edit/{id}',[bookController::class,'edit']);
+Route::post('editbook/',[bookController::class,'update']);

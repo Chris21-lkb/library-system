@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Garamond;
+    line-height: 40px;
+}
+
+.adminheader {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    position: fixed;
+    padding: 10px;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 500px;
+    background-color: black;
+    box-shadow: 2px 2px 2px black;
+}
+
+.adminheadertitle nav ul li {
+    display: inline-block;
+}
+
+.adminheadertitle nav ul li a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+.adminheadericons nav ul li {
+    display: inline-block;
+}
+
+.adminheadericons nav ul li {
+    font-size: 30px;
+    margin-right: 15px;
+    color: white;
+}
+
+.adminsection {
+    display: flex;
+    margin-top: 85px;
+}
+
+.adminsectionlinks {
+    width: 250px;
+    border-right: 1px solid black;
+    background-color: black;
+    overflow: hidden;
+}
+
+.adminsectionlinks nav ul {}
+
+.adminsectionlinks nav ul li a {
+    line-height: 60px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+}
+
+.adminsectionlinks nav ul li a:hover {
+    color: tomato;
+}
+
+.adminsectioncontent1 {
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.user {
+    border: 1px solid black;
+    width: 300px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.books {
+    border: 1px solid black;
+    width: 300px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.checkout {
+    border: 1px solid black;
+    width: 300px;
+    height: 100px;
+}
+
+.adminsectioncontent2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.addbooks {
+    width: 480px;
+    border: 1px solid black;
+}
+
+.users {
+    width: 300px;
+    border: 1px solid black;
+}
+
+.adminsectioncontent3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.listbooks {
+    border: 1px solid black;
+    width: 750px;
+    padding: 5px;
+}
+
+.editbooks {
+    text-align: center;
+}
+
+.editcontent {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    margin-top: 140px;
+}

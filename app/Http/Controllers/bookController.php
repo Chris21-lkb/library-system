@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Book;
+use App\Models\User;
 
 use function Symfony\Component\String\b;
 
@@ -114,7 +115,8 @@ class bookController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Book::find($id);
+        return view('pages.edit',['data'=>$data]);
     }
 
     /**
@@ -137,6 +139,9 @@ class bookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Book::find($id);
+        $data -> delete();
+        return redirect() -> back();
     }
+
 }
