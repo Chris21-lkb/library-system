@@ -4,7 +4,7 @@
     <div class="adminsectionlinks">
         <nav>
             <ul>
-                <li><a href="#"><i class="bi bi-house"></i> Dashboard</a></li>
+                <li><a href="{{url('admin')}}"><i class="bi bi-house"></i> Dashboard</a></li>
                 <li><a href="#"><i class="bi bi-file-break"></i> Pages layouts</a></li>
                 <li><a href="#"><i class="bi bi-globe"></i> Navigation</a></li>
                 <li><a href="#"><i class="bi bi-list-task"></i> Task</a></li>

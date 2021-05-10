@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Checkout;
 
 class CheckoutController extends Controller
 {
@@ -34,7 +35,12 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
-        return 'ok';
+        $checkout = new Checkout();
+        $checkout -> useremail = $request -> useremail;
+        $checkout -> productId = $request -> productID;
+        $checkout -> productname = $request -> productName;
+        $checkout -> save();
+        return view('pages.home');
     }
 
     /**

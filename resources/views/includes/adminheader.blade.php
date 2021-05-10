@@ -2,7 +2,7 @@
     <div class="adminheadertitle">
         <nav>
             <ul>
-                <li><a href="">Admin Panel <i class="bi bi-list"></i><a></li>
+                <li><a href="{{url('admin')}}">Admin Panel <i class="bi bi-list"></i><a></li>
             </ul>
         </nav>
     </div>

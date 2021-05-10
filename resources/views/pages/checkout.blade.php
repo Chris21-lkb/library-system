@@ -17,7 +17,7 @@
                 @csrf
                 <input type="hidden" name="useremail" value="{{ Auth::user()->email }}">
                 <input type="hidden" name="productID" value="{{$request['id']}}">
-                <input type="hidden" name="productID" value="{{$request['BookName']}}">
+                <input type="hidden" name="productName" value="{{$request['BookName']}}">
                 <button type="submit">CHECKOUT NOW</button>
             </form>
         </div>
