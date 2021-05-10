@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\addController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\bookController;
 use App\Http\Controllers\adminController;
@@ -44,11 +45,11 @@ Route::get('searchbook/',[bookController::class,'search'])->name('search');
 Route::get('admin/',[adminController::class,'index']);
 Route::get('showbook/{id}/',[bookController::class,'showdata']);
 
-Route::post('add',[checkoutController::class,'store']);
+Route::post('addCheckout',[checkoutController::class,'store']);
 Route::post('insert',[bookController::class,'store']);
 
 Route::get('delete/{id}',[bookController::class,'destroy']);
 Route::get('deleteuser/{id}',[adminController::class,'destroy']);
 
 Route::get('edit/{id}',[bookController::class,'edit']);
-Route::post('editbook/',[bookController::class,'update']);
+Route::POST('editbook',[bookController::class,'updatebook']);

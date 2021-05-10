@@ -13,7 +13,7 @@
         <h2>Year: {{$request['publishDate']}}</h2>
 
         <div class="formulaire">
-            <form method="POST" action="add">
+            <form method="POST" action="/addCheckout">
                 @csrf
                 <input type="hidden" name="useremail" value="{{ Auth::user()->email }}">
                 <input type="hidden" name="productID" value="{{$request['id']}}">

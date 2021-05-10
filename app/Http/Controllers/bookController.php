@@ -129,6 +129,25 @@ class bookController extends Controller
     public function update(Request $request, $id)
     {
         //
+        return "ok";
+    }
+    public function updatebook(Request $request)
+    {
+        $data = Book::find($request -> id);
+
+        $book_path = $request -> file('book_path')->getClientOriginalName();
+
+        $request -> file('book_path') -> storeAs('public/book/', $book_path );
+
+
+        $data -> BookName = $request -> bookname;
+        $data -> author = $request -> author;
+        $data -> publishDate = $request -> publishdate;
+        $data -> book_path = $book_path;
+        $data -> price = $request -> price;
+        $data -> save();
+
+        return redirect() -> back();
     }
 
     /**
